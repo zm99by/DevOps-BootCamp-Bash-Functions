@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+#set -x
 function pow { rez=$(($1**$2)); echo $rez; }
 function shortest {
 arr=("$@")
@@ -15,8 +15,8 @@ for (( i = 0; i < $#; i++ )) ; do
                 rez=(); rez+=(${arr[$i]})
         fi
 done
-    echo ${rez[*]}
+    xargs -n1 echo <<<${rez[*]}
 }
 function print_log (){
-    echo `date +"[%m-%d-%y %H:%M]"` $@
+    echo `date +"[%Y-%m-%d-%y %H:%M]"` $@
 }
