@@ -20,4 +20,3 @@ done
 function print_log (){
     echo `date +"[%Y-%m-%d %H:%M]"` $@
 }
-print_log "Hello World!" 
