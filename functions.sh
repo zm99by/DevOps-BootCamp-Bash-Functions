@@ -18,5 +18,6 @@ done
     xargs -n1 echo <<<${rez[*]}
 }
 function print_log (){
-    echo `date +"[%Y-%m-%d-%y %H:%M]"` $@
+    echo `date +"[%Y-%m-%d %H:%M]"` $@
 }
+print_log "Hello World!" 
