@@ -12,7 +12,8 @@ for (( i = 0; i < $#; i++ )) ; do
             (( ${#arr[$i]} < $shot_str ))
             then
                 shot_str=${#arr[$i]}
-                rez=(); rez+=(${arr[$i]})
+                rez=() # clear Array
+                rez+=(${arr[$i]})
         fi
 done
     xargs -n1 echo <<<${rez[*]}
